@@ -1,0 +1,22 @@
+<p>hero works!</p>
+<table>
+    <thead>
+        <td>Id</td>
+        <td>Hero Name</td>
+    </thead>
+    <tbody>
+        <tr *ngFor="let hero of herolist">
+            <td>{{hero.id}}</td>
+            <td>{{hero.heroName}}</td>
+            <td><button (click)="delete(hero.id)">X</button></td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="getAll()">GetAll</button>
+<br>
+<form [formGroup]="heroform">
+    <input type="number" formControlName="id">
+    <button (click)="getById()">Get by Id</button>
+</form>
+
+<button (click)="create(herolist[0])">Create</button>

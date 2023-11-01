@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'SuperHero2';
+  tal:number = 3;
+  
 }
